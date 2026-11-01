@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>AI Readiness Toolkit</title>
+<style>
+@page { size: Letter; margin: 0.7in 0.75in 0.8in; }
+:root{ --ink:#15201e; --muted:#566663; --line:#cfdad7; --accent:#0b6b62; --soft:#e6f0ee; --gold:#b98a2e;
+  --d1:#2f5bd3; --d2:#b5531d; --d3:#7a3fb8; --d4:#0b7a55; }
+*{box-sizing:border-box}
+body{margin:0;font-family:"Inter",Arial,sans-serif;font-size:10pt;line-height:1.45;color:var(--ink)}
+h1,h2,h3{font-family:"Caladea","Cambria",Georgia,serif;margin:0;line-height:1.15;color:var(--ink)}
+h1{font-size:34pt}
+h2{font-size:20pt;margin-bottom:6pt}
+h3{font-size:13pt;margin:10pt 0 3pt}
+p{margin:0 0 7pt}
+.page{page-break-after:always;break-after:page}
+.page:last-child{page-break-after:auto}
+.eyebrow{font-size:8.5pt;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:6pt}
+.lead{font-size:12pt;color:var(--muted);max-width:5.6in}
+.muted{color:var(--muted)}
+.small{font-size:9pt}
+table{width:100%;border-collapse:collapse;margin:5pt 0 8pt;font-size:9pt}
+th,td{border:0.6pt solid var(--line);padding:3.5pt 6pt;text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:700}
+.box{display:inline-block;width:12pt;height:12pt;border:0.8pt solid var(--muted);border-radius:2pt}
+.center{text-align:center}
+.fill{border-bottom:0.8pt solid var(--muted);display:inline-block;min-width:2.2in;height:12pt}
+.write{height:24pt}
+.callout{background:var(--soft);border-radius:6pt;padding:9pt 11pt;margin:8pt 0}
+ul,ol{margin:0 0 8pt;padding-left:16pt}
+li{margin-bottom:3pt}
+.tag{display:inline-block;font-size:8pt;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:2pt 6pt;border-radius:3pt;color:#fff}
+.t1{background:var(--d1)}.t2{background:var(--d2)}.t3{background:var(--d3)}.t4{background:var(--d4)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10pt}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:8pt;margin:10pt 0}
+.ability{border-top:3pt solid var(--c);padding-top:5pt}
+.ability b{font-family:"Caladea",serif;font-size:12pt}
+.cover{height:9.2in;display:flex;flex-direction:column;justify-content:space-between}
+.cover h1{font-size:44pt;margin:8pt 0 12pt}
+.cover .band{background:var(--accent);color:#fff;border-radius:8pt;padding:16pt 18pt}
+.cover .band p{margin:0}
+.week{display:flex;gap:10pt;align-items:baseline;margin-bottom:4pt}
+.agenda td:first-child{width:0.8in;white-space:nowrap;font-weight:700;color:var(--accent)}
+.foot{font-size:8pt;color:var(--muted);margin-top:10pt}
+</style>
+</head>
+<body>
+
+<!-- COVER -->
+<section class="page cover">
+  <div>
+    <p class="eyebrow">Free toolkit · Version 1.0 · November 2026</p>
+    <h1>AI Readiness Toolkit</h1>
+    <p class="lead">A 4-week program to help small teams use AI safely, confidently and well. Includes a skills check, a use-case picker, four session guides, a safe-use policy template and a results tracker.</p>
+    <div class="grid4">
+      <div class="ability" style="--c:var(--d1)"><b>Description</b><br><span class="small muted">Explaining a task clearly to AI</span></div>
+      <div class="ability" style="--c:var(--d2)"><b>Delegation</b><br><span class="small muted">Deciding what AI should and shouldn’t do</span></div>
+      <div class="ability" style="--c:var(--d3)"><b>Discernment</b><br><span class="small muted">Judging whether AI output is right</span></div>
+      <div class="ability" style="--c:var(--d4)"><b>Diligence</b><br><span class="small muted">Using AI safely and responsibly</span></div>
+    </div>
+  </div>
+  <div class="band">
+    <p style="font-family:Caladea,serif;font-size:17pt;margin-bottom:6pt">AI is only as safe as the people who build it and use it.</p>
+    <p class="small">Created by Nuhamin H. Tesfay · Based on the Cybersecurity &amp; AI Capital Model (CCM), published in the Proceedings of the Southeastern INFORMS Conference 2026. The four abilities follow the AI Fluency framework by Rick Dakan and Joseph Feller.</p>
+  </div>
+</section>
+
+<!-- HOW TO USE -->
+<section class="page">
+  <p class="eyebrow">Start here</p>
+  <h2>How to use this toolkit</h2>
+  <p>This toolkit helps a small business or nonprofit with 5 to 50 staff go from “we have AI tools” to “our team uses them safely and well” in four weeks. No AI or IT specialist is needed. One person, the <b>facilitator</b>, runs the program.</p>
+
+  <h3>The four abilities</h3>
+  <table>
+    <tr><th style="width:1.3in">Ability</th><th>What it means</th><th style="width:2.1in">Sign it’s missing</th></tr>
+    <tr><td><span class="tag t1">Description</span></td><td>Explaining a task to AI with enough context to get a useful answer</td><td>“AI never gives me what I want”</td></tr>
+    <tr><td><span class="tag t2">Delegation</span></td><td>Deciding which tasks, or which steps, AI should do and which stay with a person</td><td>AI used for everything, or for nothing</td></tr>
+    <tr><td><span class="tag t3">Discernment</span></td><td>Checking AI output for errors, invented facts and bias</td><td>AI answers copied without review</td></tr>
+    <tr><td><span class="tag t4">Diligence</span></td><td>Using AI safely, legally and transparently</td><td>Customer or private data pasted into free tools</td></tr>
+  </table>
+
+  <h3>The 4-week plan</h3>
+  <table>
+    <tr><th style="width:1in">When</th><th>What happens</th><th style="width:1.5in">Use</th></tr>
+    <tr><td>Week 0</td><td>Every staff member takes the readiness check (15 minutes). The facilitator picks 2–3 tasks where AI can help most.</td><td>Worksheets 1 and 2</td></tr>
+    <tr><td>Week 1</td><td>Session 1: Diligence. Share the safe-use rules before anyone uses AI for work.</td><td>Session guide 1, Template</td></tr>
+    <tr><td>Week 2</td><td>Session 2: Description. Writing clear requests.</td><td>Session guide 2</td></tr>
+    <tr><td>Week 3</td><td>Session 3: Delegation. Breaking work into steps.</td><td>Session guide 3</td></tr>
+    <tr><td>Week 4</td><td>Session 4: Discernment. Catching AI mistakes. Retake the readiness check and compare.</td><td>Session guide 4, Worksheet 3</td></tr>
+  </table>
+
+  <div class="callout"><b>Why safe use comes first:</b> staff start using AI on day one, so the rules must come before the skills.</div>
+
+  <h3>What you need</h3>
+  <ul>
+    <li>One 60-minute session per week, in person or on a video call</li>
+    <li>An AI tool the organization already has or approves (for example Microsoft Copilot, ChatGPT, Gemini or Claude)</li>
+    <li>A shared document as a “prompt library,” where staff save requests that worked</li>
+  </ul>
+  <p class="small muted">Prefer to take the readiness check online? Use the free AI Fluency Check, which scores you instantly and gives you a learning plan.</p>
+</section>
+
+<!-- WORKSHEET 1 -->
+<section class="page">
+  <p class="eyebrow">Worksheet 1 · Week 0 and Week 4</p>
+  <h2>AI readiness check</h2>
+  <p>Rate each statement from <b>1</b> (not at all true) to <b>5</b> (very true). Takes about 15 minutes. Repeat in Week 4.</p>
+  <p>Name or initials (optional): <span class="fill"></span> &nbsp; Date: <span class="fill" style="min-width:1.3in"></span></p>
+  <table>
+    <tr><th style="width:0.3in">#</th><th style="width:1.1in">Ability</th><th>Statement</th><th class="center" style="width:0.35in">1</th><th class="center" style="width:0.35in">2</th><th class="center" style="width:0.35in">3</th><th class="center" style="width:0.35in">4</th><th class="center" style="width:0.35in">5</th></tr>
+    <tr><td>1</td><td><span class="tag t1">Description</span></td><td>I can explain a task to an AI tool clearly enough to get a useful first answer.</td><td class="center"><span class="box"></span></td><td class="center"><span class="box"></span></td><td class="center"><span class="box"></span></td><td class="center"><span class="box"></span></td><td class="center"><span class="box"></span></td></tr>
+    <tr><td>2</td><td><span class="tag t1">Description</span></td><td>I give AI context, such as the audience and the format I need.</td><td class="center"><span class="box"></span></td><td class="center"><span class="box"></span></td><td class="center"><span class="box"></span></td><td class="center"><span class="box"></span></td><td class="center"><span class="box"></span></td></tr>
+    <tr><td>3</td><td><span class="tag t1">Description</span></td><td>When the answer is off, I know how to rephrase my request.</td><td class="center"><span class="box"></span></td><td class="center"><span class="box"></span></td><td class="center"><span class="box"></span></td><td class="center"><span class="box"></span></td><td class="center"><span class="box"></span></td></tr>
+    <tr><td>4</td><td><span class="tag t2">Delegation</span></td><td>I know which of my weekly tasks AI could speed up.</td><td class="center"><span class="box"></span></td><td class="center"><span class="box"></span></td><td class="center"><span class="box"></span></td><td class="center"><span class="box"></span></td><td class="center"><span class="box"></span></td></tr>
+    <tr><td>5</td><td><span class="tag t2">Delegation</span></td><td>I know which tasks should not be given to AI.</td><td class="center"><span class="box"></span></td><td class="center"><span class="box"></span></td><td class="center"><span class="box"></span></td><td class="center"><span class="box"></span></td><td class="center"><span class="box"></span></td></tr>
+    <tr><td>6</td><td><span class="tag t2">Delegation</span></td><td>I can break a large task into steps AI can help with.</td><td class="center"><span class="box"></span></td><td class="center"><span class="box"></span></td><td class="center"><span class="box"></span></td><td class="center"><span class="box"></span></td><td class="center"><span class="box"></span></td></tr>
+    <tr><td>7</td><td><span class="tag t3">Discernment</span></td><td>I check AI answers for errors before I use them.</td><td class="center"><span class="box"></span></td><td class="center"><span class="box"></span></td><td class="center"><span class="box"></span></td><td class="center"><span class="box"></span></td><td class="center"><span class="box"></span></td></tr>
+    <tr><td>8</td><td><span class="tag t3">Discernment</span></td><td>I can spot when AI has made up a fact, name or source.</td><td class="center"><span class="box"></span></td><td class="center"><span class="box"></span></td><td class="center"><span class="box"></span></td><td class="center"><span class="box"></span></td><td class="center"><span class="box"></span></td></tr>
+    <tr><td>9</td><td><span class="tag t3">Discernment</span></td><td>I know when an AI answer needs a second opinion from a person.</td><td class="center"><span class="box"></span></td><td class="center"><span class="box"></span></td><td class="center"><span class="box"></span></td><td class="center"><span class="box"></span></td><td class="center"><span class="box"></span></td></tr>
+    <tr><td>10</td><td><span class="tag t4">Diligence</span></td><td>I know what information I must never put into an AI tool.</td><td class="center"><span class="box"></span></td><td class="center"><span class="box"></span></td><td class="center"><span class="box"></span></td><td class="center"><span class="box"></span></td><td class="center"><span class="box"></span></td></tr>
+    <tr><td>11</td><td><span class="tag t4">Diligence</span></td><td>I tell people when AI helped create something I share.</td><td class="center"><span class="box"></span></td><td class="center"><span class="box"></span></td><td class="center"><span class="box"></span></td><td class="center"><span class="box"></span></td><td class="center"><span class="box"></span></td></tr>
+    <tr><td>12</td><td><span class="tag t4">Diligence</span></td><td>I know who to ask if I’m unsure whether an AI use is allowed.</td><td class="center"><span class="box"></span></td><td class="center"><span class="box"></span></td><td class="center"><span class="box"></span></td><td class="center"><span class="box"></span></td><td class="center"><span class="box"></span></td></tr>
+  </table>
+  <div class="grid2">
+    <table>
+      <tr><th>Ability</th><th>Statements</th><th class="center">My score (3–15)</th></tr>
+      <tr><td>Description</td><td>1–3</td><td></td></tr>
+      <tr><td>Delegation</td><td>4–6</td><td></td></tr>
+      <tr><td>Discernment</td><td>7–9</td><td></td></tr>
+      <tr><td>Diligence</td><td>10–12</td><td></td></tr>
+    </table>
+    <table>
+      <tr><th>Score</th><th>Level</th><th>What it means</th></tr>
+      <tr><td>3–7</td><td>Starting</td><td>Needs the full session</td></tr>
+      <tr><td>8–11</td><td>Developing</td><td>Needs practice and feedback</td></tr>
+      <tr><td>12–15</td><td>Confident</td><td>Can coach a colleague</td></tr>
+    </table>
+  </div>
+  <p class="small muted">Facilitator: the team’s lowest-scoring ability tells you where to spend the most time. Staff who score Confident on Diligence can be “AI champions” who answer colleagues’ questions.</p>
+</section>
+
+<!-- WORKSHEET 2 -->
+<section class="page">
+  <p class="eyebrow">Worksheet 2 · Week 0</p>
+  <h2>Pick your first 2–3 use cases</h2>
+  <p>Start with tasks that pass all four tests. Low-risk, frequent tasks build confidence fast.</p>
+  <table>
+    <tr><th>Test</th><th>Question to ask</th></tr>
+    <tr><td><b>Frequent</b></td><td>Is it done at least weekly?</td></tr>
+    <tr><td><b>Time-consuming</b></td><td>Does it take 30 minutes or more each time?</td></tr>
+    <tr><td><b>Low-risk</b></td><td>Would a mistake be caught before it reaches a customer?</td></tr>
+    <tr><td><b>No sensitive data</b></td><td>Can it be done without customer, health or payment details?</td></tr>
+  </table>
+
+  <h3>Ideas by role</h3>
+  <table>
+    <tr><th>Role</th><th>Good first use case</th><th>Keep with a person</th></tr>
+    <tr><td>Owner / manager</td><td>Drafting emails, meeting summaries, job postings</td><td>Hiring and firing decisions</td></tr>
+    <tr><td>Sales / marketing</td><td>Social media drafts, product descriptions, campaign ideas</td><td>Final pricing and contract terms</td></tr>
+    <tr><td>Customer service</td><td>Reply templates, FAQ drafts</td><td>Complaints, refunds, sensitive cases</td></tr>
+    <tr><td>Operations</td><td>Checklists, procedures, schedules</td><td>Safety and compliance sign-off</td></tr>
+    <tr><td>Finance / admin</td><td>Summarizing reports, formatting spreadsheets</td><td>Tax filings, payroll, payments</td></tr>
+    <tr><td>Nonprofit programs</td><td>Grant outlines, newsletters, translation drafts</td><td>Final budgets, beneficiary data</td></tr>
+  </table>
+
+  <h3>Our chosen use cases</h3>
+  <table>
+    <tr><th style="width:2.4in">Task</th><th>Owner</th><th>Minutes it takes today</th><th class="center">Passes all 4 tests?</th></tr>
+    <tr class="write"><td class="write"></td><td></td><td></td><td class="center"><span class="box"></span></td></tr>
+    <tr class="write"><td class="write"></td><td></td><td></td><td class="center"><span class="box"></span></td></tr>
+    <tr class="write"><td class="write"></td><td></td><td></td><td class="center"><span class="box"></span></td></tr>
+  </table>
+  <p class="small muted">The “minutes it takes today” column is your baseline for Worksheet 3.</p>
+</section>
+
+<!-- SESSIONS 1 & 2 -->
+<section class="page">
+  <p class="eyebrow">Session guides · Weeks 1 and 2</p>
+  <h2>Session 1: Diligence</h2>
+  <p><span class="tag t4">Goal</span> Staff can use AI without exposing private data.</p>
+  <table class="agenda">
+    <tr><td>0–10 min</td><td>Why safe use comes first. Share one real example of an AI data leak or mistake in the news.</td></tr>
+    <tr><td>10–30 min</td><td>Walk through the Safe-Use Policy together. Fill in the approved tools and contact person.</td></tr>
+    <tr><td>30–50 min</td><td><b>Practice:</b> sort 10 sample requests into “OK for AI” and “Not OK.” Discuss the tricky ones.</td></tr>
+    <tr><td>50–60 min</td><td>Everyone signs or acknowledges the policy. Questions.</td></tr>
+  </table>
+  <p class="small"><b>Facilitator tip:</b> make reporting mistakes safe. People who fear blame hide problems.</p>
+
+  <h2 style="margin-top:16pt">Session 2: Description</h2>
+  <p><span class="tag t1">Goal</span> Staff get a useful first draft in one or two tries.</p>
+  <table class="agenda">
+    <tr><td>0–15 min</td><td>The four parts of a good request: <b>task, context, audience, format</b>. Show a weak and a strong request side by side.</td></tr>
+    <tr><td>15–25 min</td><td>How to fix a weak answer: say what was wrong (“too long,” “too formal”) instead of starting over.</td></tr>
+    <tr><td>25–50 min</td><td><b>Practice:</b> each person rewrites one of their chosen use cases as a four-part request and compares results.</td></tr>
+    <tr><td>50–60 min</td><td>Add the best requests to the shared prompt library.</td></tr>
+  </table>
+  <div class="callout small"><b>Weak:</b> “Summarize this.”<br><b>Strong:</b> “Summarize this report in 5 bullet points for our board, who aren’t technical. Flag any decisions they need to make.”</div>
+</section>
+
+<!-- SESSIONS 3 & 4 -->
+<section class="page">
+  <p class="eyebrow">Session guides · Weeks 3 and 4</p>
+  <h2>Session 3: Delegation</h2>
+  <p><span class="tag t2">Goal</span> Staff can decide what to hand to AI and what to keep.</p>
+  <table class="agenda">
+    <tr><td>0–15 min</td><td>What AI does well (drafting, summarizing, reformatting) and what stays with people (decisions about people, money, legal and safety matters).</td></tr>
+    <tr><td>15–45 min</td><td><b>Practice:</b> map one chosen use case into steps. Mark each step “AI drafts,” “Person does,” or “Person checks.”</td></tr>
+    <tr><td>45–60 min</td><td>Share maps. Agree on one new workflow to try this week.</td></tr>
+  </table>
+
+  <h2 style="margin-top:16pt">Session 4: Discernment</h2>
+  <p><span class="tag t3">Goal</span> Staff catch AI mistakes before they spread.</p>
+  <table class="agenda">
+    <tr><td>0–15 min</td><td>How AI gets things wrong: invented facts and sources, outdated information, confident tone, bias.</td></tr>
+    <tr><td>15–40 min</td><td><b>Practice:</b> find the errors in three prepared AI answers, each with one planted mistake.</td></tr>
+    <tr><td>40–50 min</td><td>Checking habits: open every source, double-check numbers and names, ask a person when stakes are high.</td></tr>
+    <tr><td>50–60 min</td><td>Everyone retakes the readiness check (Worksheet 1).</td></tr>
+  </table>
+  <div class="callout small"><b>Preparing the practice answers:</b> ask an AI tool a question you know the answer to, then edit in one wrong number, one fake source or one wrong name. Keep an answer key.</div>
+</section>
+
+<!-- POLICY TEMPLATE -->
+<section class="page">
+  <p class="eyebrow">Template · Share in Week 1</p>
+  <h2>AI Safe-Use Policy</h2>
+  <p>Organization: <span class="fill"></span> &nbsp; Effective date: <span class="fill" style="min-width:1.3in"></span></p>
+
+  <h3>Approved tools</h3>
+  <p>Only these AI tools may be used for work: <span class="fill" style="min-width:3.6in"></span></p>
+
+  <h3>Never put into an AI tool</h3>
+  <ul>
+    <li>Customer or client names, addresses, phone numbers or emails</li>
+    <li>Payment, bank or credit card details</li>
+    <li>Health or medical information</li>
+    <li>Passwords, login details or security settings</li>
+    <li>Employee records, salaries or performance reviews</li>
+    <li>Contracts or documents marked confidential</li>
+  </ul>
+
+  <h3>Always</h3>
+  <ul>
+    <li>Check facts, numbers and names before using an AI answer.</li>
+    <li>Have a person review anything sent to customers, funders or the public.</li>
+    <li>Remove names and details before pasting text in (“a customer” instead of a name).</li>
+    <li>Be open about AI’s role in important work when asked.</li>
+  </ul>
+
+  <h3>AI never makes the final decision on</h3>
+  <p>Hiring, pay, pricing, refunds, legal or safety matters.</p>
+
+  <h3>Questions or mistakes</h3>
+  <p>Contact: <span class="fill" style="min-width:3.2in"></span></p>
+  <p>Reporting a mistake early is always the right call and will not be punished.</p>
+
+  <p style="margin-top:14pt">Staff acknowledgment: <span class="fill"></span> &nbsp; Date: <span class="fill" style="min-width:1.3in"></span></p>
+  <p class="foot">These rules follow common practice from the NIST AI Risk Management Framework, scaled down for a small team. They are not legal advice. Organizations that handle health or payment data should also check the rules that apply to their sector.</p>
+</section>
+
+<!-- RESULTS TRACKER -->
+<section class="page">
+  <p class="eyebrow">Worksheet 3 · Week 0 and Week 4</p>
+  <h2>Results tracker</h2>
+  <p>Record four numbers before Week 1 and after Week 4.</p>
+  <table>
+    <tr><th style="width:2.2in">Measure</th><th>How to collect it</th><th class="center">Week 0</th><th class="center">Week 4</th><th class="center">Change</th></tr>
+    <tr class="write"><td>Average readiness score per ability (3–15)</td><td>Worksheet 1</td><td></td><td></td><td></td></tr>
+    <tr class="write"><td>Minutes per chosen task</td><td>Time each use case once</td><td></td><td></td><td></td></tr>
+    <tr class="write"><td>Staff using AI weekly (%)</td><td>One-question survey</td><td></td><td></td><td></td></tr>
+    <tr class="write"><td>Safe-use mistakes reported</td><td>Reports to the contact person</td><td></td><td></td><td></td></tr>
+  </table>
+
+  <h3>Team scores by ability</h3>
+  <table>
+    <tr><th>Ability</th><th class="center">Week 0 average</th><th class="center">Week 4 average</th><th>Notes</th></tr>
+    <tr class="write"><td>Description</td><td></td><td></td><td></td></tr>
+    <tr class="write"><td>Delegation</td><td></td><td></td><td></td></tr>
+    <tr class="write"><td>Discernment</td><td></td><td></td><td></td></tr>
+    <tr class="write"><td>Diligence</td><td></td><td></td><td></td></tr>
+  </table>
+
+  <h3>What success looks like after 4 weeks</h3>
+  <ul>
+    <li>Most staff score at least “Developing” (8 or higher) on every ability.</li>
+    <li>Each chosen task takes noticeably less time, with quality checked by its owner.</li>
+    <li>No sensitive data has gone into an AI tool.</li>
+  </ul>
+  <div class="callout small">Close the program with a one-page summary for leadership: what changed, what you learned, and which tasks to add next.</div>
+</section>
+
+<!-- RESOURCES -->
+<section class="page">
+  <p class="eyebrow">Keep learning</p>
+  <h2>Free resources</h2>
+  <table>
+    <tr><th>Resource</th><th>Good for</th></tr>
+    <tr><td>AI Fluency: Framework &amp; Foundations (Anthropic Academy)</td><td>The four abilities in depth; free certificate</td></tr>
+    <tr><td>Google AI Essentials (Grow with Google)</td><td>Everyday AI skills at work</td></tr>
+    <tr><td>Microsoft Learn: AI and Copilot training paths</td><td>Teams that use Microsoft 365 and Copilot</td></tr>
+    <tr><td>IBM SkillsBuild</td><td>AI basics and responsible AI</td></tr>
+    <tr><td>Elements of AI (University of Helsinki)</td><td>How AI works, for non-technical learners</td></tr>
+    <tr><td>NIST AI Risk Management Framework</td><td>Deeper guidance on managing AI risk</td></tr>
+  </table>
+
+  <h3>About this toolkit</h3>
+  <p>The AI Readiness Toolkit was created by <b>Nuhamin H. Tesfay</b>, an AI governance and cybersecurity researcher. It turns research on AI fluency, the Cybersecurity &amp; AI Capital Model (CCM), published in the Proceedings of the Southeastern INFORMS Conference 2026, into a practical program for small teams. The four abilities follow the AI Fluency framework developed by Rick Dakan and Joseph Feller.</p>
+  <p>You are free to use and share this toolkit with credit. It is a learning resource, not legal or compliance advice.</p>
+  <p>Feedback and pilot results are welcome: <b>nuhamintesfay16@gmail.com</b> · linkedin.com/in/nuhamintesfay</p>
+</section>
+
+</body>
+</html>
